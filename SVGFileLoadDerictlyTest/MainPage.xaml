@@ -13,8 +13,8 @@
         <local:SVGImageConverter x:Key="MyConvert"/>
     </Page.Resources>
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image x:Name="MyImageView" Source="{Binding imageSource ,Mode=OneWay,Converter={StaticResource MyConvert }}" />
-     
+        <!--<Image x:Name="MyImageView" Source="{Binding imageSource ,Mode=OneWay,Converter={StaticResource MyConvert }}" />-->
+        <Image x:Name="MyImageView" />
         <Button x:Name="MyBtn" Click="MyBtn_Click" Content="ClickMe"/>
     </StackPanel>
 </Page>
