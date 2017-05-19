@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="SVGFileLoadDerictlyTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SVGFileLoadDerictlyTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:HomePageViewModel />
+    </Page.DataContext>
+    <Page.Resources>
+        <local:SVGImageConverter x:Key="MyConvert"/>
+    </Page.Resources>
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image x:Name="MyImageView" Source="{Binding imageSource ,Mode=OneWay,Converter={StaticResource MyConvert }}" />
+     
+        <Button x:Name="MyBtn" Click="MyBtn_Click" Content="ClickMe"/>
+    </StackPanel>
+</Page>
